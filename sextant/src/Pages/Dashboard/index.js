@@ -5,6 +5,7 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import { Card, Space, Statistic, Typography } from "antd";
+import Address from '../../Components/IPAddress/';
 
 
 function Dashboard() {
@@ -68,6 +69,19 @@ function Dashboard() {
           }
           title={"Revenue"}
         />
+        <Card>
+          <Typography.Title level={4}>Public IPv4 Address</Typography.Title>
+          <Typography.Text>
+          <Address url='https://api.ipify.org?format=json' />
+          </Typography.Text>
+        </Card>
+        <Card>
+          <Typography.Title level={4}>Public IPv6 Address</Typography.Title>
+          <Typography.Text>
+          <Address url='https://api64.ipify.org?format=json' />
+          </Typography.Text>
+        </Card>
+        
       </Space>
     </Space>
   );
